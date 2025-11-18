@@ -4,7 +4,6 @@ import {
   FaCss3Alt,
   FaReact,
   FaGit,
-  FaGithub,
   FaPython,
 } from "react-icons/fa";
 import {
