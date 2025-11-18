@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage";
 import HomePage from "./pages/HomePage";
 
+
+
 const App: React.FC = () => {
   return (
     <Router>

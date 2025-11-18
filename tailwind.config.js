@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -15,15 +14,48 @@ export default {
         earthyTan: '#BFA18F',
       },
       keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translate(0px, 0px) rotate(0deg)' },
+          '10%': { transform: 'translate(5px, -5px) rotate(5deg)' },
+          '20%': { transform: 'translate(-5px, 5px) rotate(-5deg)' },
+          '30%': { transform: 'translate(6px, -4px) rotate(4deg)' },
+          '40%': { transform: 'translate(-6px, 4px) rotate(-4deg)' },
+          '50%': { transform: 'translate(5px, -5px) rotate(5deg)' },
+          '60%': { transform: 'translate(-5px, 5px) rotate(-5deg)' },
+          '70%': { transform: 'translate(4px, -4px) rotate(4deg)' },
+          '80%': { transform: 'translate(-4px, 4px) rotate(-4deg)' },
+          '90%': { transform: 'translate(3px, -3px) rotate(3deg)' },
+        },
         swing: {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '25%': { transform: 'rotate(8deg)' },
           '50%': { transform: 'rotate(0deg)' },
           '75%': { transform: 'rotate(-8deg)' },
         },
+        twinkle: {
+          '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.8)' },
+        },
+        'float-slow': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'float-slower': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-35px)' },
+        },
+        'float-slowest': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-50px)' },
+        },
       },
       animation: {
+        shake: 'shake 0.5s linear infinite',
         swing: 'swing 2s ease-in-out infinite',
+        twinkle: 'twinkle 2s ease-in-out infinite',
+        'float-slow': 'float-slow 8s ease-in-out infinite',
+        'float-slower': 'float-slower 12s ease-in-out infinite',
+        'float-slowest': 'float-slowest 18s ease-in-out infinite',
       },
     },
   },
