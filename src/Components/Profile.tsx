@@ -1,5 +1,3 @@
-
-
 import { useMemo } from "react";
 import ProfilePic from "../assets/1763054692778-removebg-preview.png";
 
@@ -15,8 +13,7 @@ function Profile() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center px-4 sm:px-6 overflow-hidden bg-black/10">
-    
+    <section className="relative py-6 w-full lg:min-h-screen flex justify-center items-center px-4 sm:px-6 overflow-hidden bg-black/10">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {stars.map((star, i) => (
           <span
@@ -35,7 +32,6 @@ function Profile() {
         ))}
       </div>
 
-     
       <div
         className="absolute -top-32 -left-20 w-72 h-72 rounded-full opacity-30 blur-3xl animate-float-slow"
         style={{ background: "#7B4B35" }}
@@ -49,26 +45,23 @@ function Profile() {
         style={{ background: "#D9A066" }}
       />
 
-     
       <div
         className="relative w-full max-w-4xl rounded-3xl border shadow-xl py-24 px-6 sm:px-10 text-center mt-28 sm:mt-32 backdrop-blur-xl"
         style={{ borderColor: "#7B4B35", backgroundColor: "rgba(0,0,0,0.25)" }}
       >
-        
         <div
-  className="absolute left-1/2 -top-16 sm:-top-20 -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden shadow-2xl animate-shake"
-  style={{
-    border: "6px solid #C79A7D",
-    boxShadow: "0 0 35px rgba(199,154,125,0.35)",
-  }}
->
-  <img
-     src={ProfilePic}
-              alt="Profile"
-    className="w-full h-full object-cover bg-[#BFA18F]"
-  />
-</div>
-
+          className="absolute left-1/2 -top-16 sm:-top-20 -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden shadow-2xl animate-shake"
+          style={{
+            border: "6px solid #C79A7D",
+            boxShadow: "0 0 35px rgba(199,154,125,0.35)",
+          }}
+        >
+          <img
+            src={ProfilePic}
+            alt="Profile"
+            className="w-full h-full object-cover bg-[#BFA18F]"
+          />
+        </div>
 
         <h1
           className="text-3xl sm:text-5xl font-bold mt-20 sm:mt-10 mb-4 sm:mb-6"
