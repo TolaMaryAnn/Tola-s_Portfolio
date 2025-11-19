@@ -38,7 +38,7 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen lg:min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -152,23 +152,29 @@ const SplashPage: React.FC = () => {
       </div>
 
       {/* Social icons */}
-      <div
-        className={`flex flex-wrap justify-center gap-4 sm:gap-10 lg:mt-18 mt-8 transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        {[FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp].map((Icon, i) => (
-          <a
-            key={i}
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
-          >
-            <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
-          </a>
-        ))}
-      </div>
+<div
+  className={`flex flex-wrap justify-center gap-4 sm:gap-10 lg:mt-18 mt-8 transition-all duration-1000 ease-out transform ${
+    show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+  }`}
+>
+  {[
+    { Icon: FaInstagram, link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==" },
+    { Icon: FaLinkedin, link: "" }, // replace with your LinkedIn
+    { Icon: FaTwitter, link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08" },
+    { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
+  ].map(({ Icon, link }, i) => (
+    <a
+      key={i}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
+    >
+      <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
+    </a>
+  ))}
+</div>
+
 
       <Link
         to="/home"

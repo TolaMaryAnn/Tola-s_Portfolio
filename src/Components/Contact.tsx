@@ -15,7 +15,7 @@ function Contact() {
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-12">
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:maryannomotola393@gmail.com"
               className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: "#4E3629" }}
             >
@@ -26,7 +26,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://twitter.com/yourprofile"
+              href="https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08"
               className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: "#4E3629" }}
             >
@@ -37,7 +37,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="#"
               className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               style={{ backgroundColor: "#4E3629" }}
             >
