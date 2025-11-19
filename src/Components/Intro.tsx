@@ -164,25 +164,24 @@ const Intro: React.FC = () => {
           <p className="text-xs tracking-widest text-[#C79A7D] mb-3">
             MY RESUME
           </p>
-          <button
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/MaryAnn_Omotola_Ojegbile.pdf";
-              link.download = "MaryAnn_Omotola_Ojegbile.pdf";
-              link.target = "_blank";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
+          <a
+            href="/MaryAnn_Omotola_Ojegbile.pdf"
+            download="MaryAnn_Omotola_Ojegbile.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
-  mt-2 px-6 py-3 bg-black/50 border border-[#7B4B35]/40 rounded-xl hover:bg-[#C79A7D] hover:text-black transition font-semibold text-sm inline-block text-center cursor-pointer
+    relative z-50 pointer-events-auto
+    mt-6 px-8 py-3 bg-black/70 border border-[#7B4B35]/60 rounded-xl
+    text-white font-semibold text-sm
+    inline-flex items-center gap-2 justify-center
+    
+    cursor-pointer transition-all duration-300 transform hover:scale-105
+    shadow-md hover:shadow-xl
   "
           >
-            <span className="transform hover:scale-125 transition-transform duration-300">
-              📄
-            </span>
+            <span className="text-lg">📄</span>
             DOWNLOAD
-          </button>
+          </a>
         </div>
       </div>
 

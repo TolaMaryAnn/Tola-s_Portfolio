@@ -38,7 +38,7 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen lg:min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
       {glitters.map((g, i) => (
         <span
           key={i}
