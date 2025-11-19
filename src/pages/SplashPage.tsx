@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -14,12 +13,9 @@ const SplashPage: React.FC = () => {
 
   const [show, setShow] = useState(false);
 
- 
   useEffect(() => {
-    setTimeout(() => setShow(true), 100); 
+    setTimeout(() => setShow(true), 100);
   }, []);
-
-  
 
   type Glitter = {
     left: string;
@@ -42,8 +38,7 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#BFA18F] text-black p-8 relative overflow-hidden">
-     
+    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-8 relative overflow-hidden">
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -58,7 +53,6 @@ const SplashPage: React.FC = () => {
         ></span>
       ))}
 
-     
       <div
         className={`w-full mb-8 transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
@@ -71,28 +65,28 @@ const SplashPage: React.FC = () => {
               {weekday}
             </p>
             <div className="flex items-center space-x-1">
-              <span className="text-xl font-bold">{day}</span>
-              <span className="text-sm">{month}</span>
+              <span className="text-xl text-gray-200 font-bold">{day}</span>
+              <span className="text-sm text-gray-200">{month}</span>
               <span className="text-sm text-[#7B4B35]">{year}</span>
             </div>
             <div className="mt-1 w-8 h-1 bg-[#7B4B35] rounded-full"></div>
           </div>
 
-          <h1 className="text-2xl mt-4 font-bold text-center">
+          <h1 className="text-2xl text-white mt-4 font-bold text-center">
             Tola 🤎 &#9889;
           </h1>
         </div>
 
         {/* Desktop */}
         <div className="hidden sm:flex w-full justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold">Tola 🤎 &#9889;</h1>
+          <h1 className="text-2xl md:text-3xl text-gray-200 font-bold">Tola 🤎 &#9889;</h1>
           <div className="flex flex-col items-center justify-center bg-[#A36D5C] p-2 rounded-lg shadow-md">
             <p className="text-xs md:text-sm tracking-wide uppercase text-[#7B4B35]">
               {weekday}
             </p>
             <div className="flex items-center space-x-1 md:space-x-2">
-              <span className="text-xl md:text-2xl font-bold">{day}</span>
-              <span className="text-sm md:text-base">{month}</span>
+              <span className="text-xl text-gray-200 md:text-2xl font-bold">{day}</span>
+              <span className="text-sm text-gray-200 md:text-base">{month}</span>
               <span className="text-sm md:text-base text-[#7B4B35]">
                 {year}
               </span>
@@ -102,13 +96,12 @@ const SplashPage: React.FC = () => {
         </div>
       </div>
 
-      
       <div
         className={`relative flex justify-center items-center mt-6 sm:mt-12 w-full transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative z-10 leading-none">
+        <h2 className="text-4xl text-gray-200 xs:text-5xl sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative z-10 leading-none">
           PORTFOLIO
         </h2>
 
@@ -164,17 +157,16 @@ const SplashPage: React.FC = () => {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-[#C79A7D] rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
+            className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
           >
             <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
           </a>
         ))}
       </div>
 
-    
       <Link
         to="/home"
-        className={`mt-2 self-end inline-flex items-center px-5 py-3 bg-gradient-to-r from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group ${
+        className={` self-end inline-flex items-center px-5 py-3 bg-gradient-to-r from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >

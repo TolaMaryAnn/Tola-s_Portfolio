@@ -1,6 +1,8 @@
 import Intro from "../Components/Intro"
 import Profile from "../Components/Profile"
+import Projects from "../Components/Projects"
 import Skills from "../Components/Skills"
+
 function HomePage() {
   
 
@@ -9,6 +11,7 @@ function HomePage() {
       <Intro/>
       <Profile/>
       <Skills/>
+      <Projects/>
       </div>
     )
   }
