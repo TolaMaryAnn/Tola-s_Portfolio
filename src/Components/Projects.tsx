@@ -58,31 +58,27 @@ export default function Projects() {
 
   return (
     <section className="relative py-16 text-white overflow-hidden">
-      {/* ✨ ANIMATED BACKGROUND GRID LINES */}
       <div className="absolute inset-0 pointer-events-none">
-  {/* Horizontal lines */}
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage:
-        "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px)", // solid black, normal thickness
-      backgroundSize: "100% 120px", // bigger spacing
-      animation: "moveDown 12s linear infinite",
-    }}
-  ></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px)",
+            backgroundSize: "100% 120px",
+            animation: "moveDown 12s linear infinite",
+          }}
+        ></div>
 
-  {/* Vertical lines */}
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage:
-        "linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)", // solid black, normal thickness
-      backgroundSize: "120px 100%", // bigger spacing
-      animation: "moveRight 12s linear infinite",
-    }}
-  ></div>
-</div>
-
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
+            backgroundSize: "120px 100%",
+            animation: "moveRight 12s linear infinite",
+          }}
+        ></div>
+      </div>
 
       <style>
         {`
@@ -97,7 +93,6 @@ export default function Projects() {
         `}
       </style>
 
-      {/* MAIN CONTENT */}
       <div className="relative max-w-7xl mx-auto px-4 z-10">
         <h2 className="text-xl tracking-widest mb-6">PROJECTS</h2>
         <p className="mb-12" style={{ color: "#BFA18F" }}>
@@ -105,7 +100,6 @@ export default function Projects() {
           coming soon!
         </p>
 
-        {/* PROJECTS GRID / MOBILE SCROLL */}
         <div
           className="
     flex flex-row overflow-x-auto gap-x-6 px-4
@@ -139,7 +133,6 @@ export default function Projects() {
                   {project.name}
                 </h3>
 
-                {/* Image + Link Icon */}
                 <div className="relative group">
                   <div className="px-4 pt-4">
                     <img
@@ -154,17 +147,15 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-              absolute right-3 
-              opacity-0 
-              group-hover:opacity-100 
-              transition-all duration-500 
-              translate-y-5 
-              group-hover:translate-y-0
-              scale-75 group-hover:scale-100
-              p-[10px]
-              rounded-2xl
-              backdrop-blur-md shadow-lg border
-            "
+    absolute right-3 
+    opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+    transition-all duration-500 
+    translate-y-0 sm:translate-y-5 sm:group-hover:translate-y-0
+    scale-100 sm:scale-75 sm:group-hover:scale-100
+    p-[10px]
+    rounded-2xl
+    backdrop-blur-md shadow-lg border
+  "
                     style={{
                       background: "rgba(217, 160, 102, 0.18)",
                       borderColor: "#C79A7D",
@@ -178,7 +169,6 @@ export default function Projects() {
                   </a>
                 </div>
 
-                {/* Description + Read More */}
                 <div className="p-4">
                   <p className="text-sm text-white">
                     {isExpanded ? project.description : shortText}
