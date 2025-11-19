@@ -1,5 +1,3 @@
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
@@ -17,16 +15,16 @@ module.exports = {
       },
       keyframes: {
         shakeFancy: {
-          '0%, 100%': { transform: 'translate(0px, 0px) rotate(0deg)' },
-          '10%': { transform: 'translate(5px, -5px) rotate(5deg)' },
-          '20%': { transform: 'translate(-5px, 5px) rotate(-5deg)' },
-          '30%': { transform: 'translate(6px, -4px) rotate(4deg)' },
-          '40%': { transform: 'translate(-6px, 4px) rotate(-4deg)' },
-          '50%': { transform: 'translate(5px, -5px) rotate(5deg)' },
-          '60%': { transform: 'translate(-5px, 5px) rotate(-5deg)' },
-          '70%': { transform: 'translate(4px, -4px) rotate(4deg)' },
-          '80%': { transform: 'translate(-4px, 4px) rotate(-4deg)' },
-          '90%': { transform: 'translate(3px, -3px) rotate(3deg)' },
+          '0%, 100%': { transform: 'translate(0,0) rotate(0deg)' },
+          '10%': { transform: 'translate(5px,-5px) rotate(5deg)' },
+          '20%': { transform: 'translate(-5px,5px) rotate(-5deg)' },
+          '30%': { transform: 'translate(6px,-4px) rotate(4deg)' },
+          '40%': { transform: 'translate(-6px,4px) rotate(-4deg)' },
+          '50%': { transform: 'translate(5px,-5px) rotate(5deg)' },
+          '60%': { transform: 'translate(-5px,5px) rotate(-5deg)' },
+          '70%': { transform: 'translate(4px,-4px) rotate(4deg)' },
+          '80%': { transform: 'translate(-4px,4px) rotate(-4deg)' },
+          '90%': { transform: 'translate(3px,-3px) rotate(3deg)' },
         },
         shakeSimple: {
           '0%, 100%': { transform: 'translateX(0)' },
@@ -45,15 +43,15 @@ module.exports = {
           '50%': { opacity: '1', transform: 'scale(1.8)' },
         },
         'float-slow': {
-          '0%, 100%': { transform: 'translateY(0px)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
         'float-slower': {
-          '0%, 100%': { transform: 'translateY(0px)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-35px)' },
         },
         'float-slowest': {
-          '0%, 100%': { transform: 'translateY(0px)' },
+          '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-50px)' },
         },
       },
