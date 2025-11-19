@@ -2,6 +2,8 @@ import Intro from "../Components/Intro"
 import Profile from "../Components/Profile"
 import Projects from "../Components/Projects"
 import Skills from "../Components/Skills"
+import Contact from "../Components/Contact"
+import Footer from "../Components/Footer"
 
 function HomePage() {
   
@@ -12,6 +14,8 @@ function HomePage() {
       <Profile/>
       <Skills/>
       <Projects/>
+      <Contact/>
+      <Footer/>
       </div>
     )
   }

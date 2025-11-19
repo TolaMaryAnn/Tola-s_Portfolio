@@ -2,19 +2,16 @@ import React, { useMemo, useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Intro: React.FC = () => {
-  const [loaded, setLoaded] = useState(false); 
+  const [loaded, setLoaded] = useState(false);
 
-  
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-
   const handleClick = () => {
     setLoaded(false);
-    setTimeout(() => setLoaded(true), 50); 
+    setTimeout(() => setLoaded(true), 50);
   };
-
 
   const stars = useMemo(() => {
     return Array.from({ length: 50 }).map(() => ({
@@ -26,7 +23,6 @@ const Intro: React.FC = () => {
     }));
   }, []);
 
- 
   const blobs = useMemo(
     () => [
       {
@@ -55,7 +51,6 @@ const Intro: React.FC = () => {
     []
   );
 
- 
   const fullText = "Hey, I am Tola 🤎⚡";
   const [displayText, setDisplayText] = useState("");
   useEffect(() => {
@@ -75,7 +70,6 @@ const Intro: React.FC = () => {
         transition-all duration-1000 ease-out
         ${loaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"}`}
     >
-   
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {stars.map((star, i) => (
           <span
@@ -87,20 +81,18 @@ const Intro: React.FC = () => {
               width: `${star.size}px`,
               height: `${star.size}px`,
               backgroundColor: star.color,
-              opacity: star.opacity,
               filter: "blur(1px)",
             }}
           />
         ))}
       </div>
 
-   
       {blobs.map((b, i) => (
         <div
           key={i}
           className={`absolute ${b.size} rounded-full opacity-20 blur-3xl ${
             b.anim
-          } ${b.translate || ""}`}
+          } animate-twinkle ${b.translate || ""}`}
           style={{
             top: b.top,
             bottom: b.bottom,
@@ -111,7 +103,6 @@ const Intro: React.FC = () => {
         />
       ))}
 
- 
       <div className="absolute top-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 flex items-center space-x-4 bg-black/30 px-10 py-4 rounded-full backdrop-blur-md border border-[#7B4B35]/40 whitespace-nowrap">
         <button className="text-sm font-medium hover:text-[#C79A7D] transition">
           Projects
@@ -121,7 +112,6 @@ const Intro: React.FC = () => {
         </button>
       </div>
 
-    
       <div className="hidden sm:flex absolute top-6 right-6 space-x-4">
         {[FaGithub, FaLinkedin, FaTwitter].map((Icon, i) => (
           <div
@@ -135,7 +125,6 @@ const Intro: React.FC = () => {
         ))}
       </div>
 
-   
       <div className="flex flex-col justify-center items-center text-center h-full px-4 md:px-20 pt-28 md:pt-32">
         <h1 className="text-4xl md:text-7xl lg:text-8xl mt-24 lg:mt-18 font-bold leading-tight text-[#C79A7D]">
           {displayText}
