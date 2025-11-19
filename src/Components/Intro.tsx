@@ -104,10 +104,36 @@ const Intro: React.FC = () => {
       ))}
 
       <div className="absolute top-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 flex items-center space-x-4 bg-black/30 px-10 py-4 rounded-full backdrop-blur-md border border-[#7B4B35]/40 whitespace-nowrap">
-        <button className="text-sm font-medium hover:text-[#C79A7D] transition">
+        <button
+          onClick={() => {
+            document.getElementById("skills")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
+        >
+          Skills
+        </button>
+
+        <button
+          onClick={() => {
+            document.getElementById("projects")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
+        >
           Projects
         </button>
-        <button className="text-sm font-medium hover:text-[#C79A7D] transition">
+
+        <button
+          onClick={() => {
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
+        >
           Contact Me
         </button>
       </div>
@@ -138,7 +164,23 @@ const Intro: React.FC = () => {
           <p className="text-xs tracking-widest text-[#C79A7D] mb-3">
             MY RESUME
           </p>
-          <button className="mt-2 px-6 py-3 bg-black/50 border border-[#7B4B35]/40 rounded-xl hover:bg-[#C79A7D] hover:text-black transition font-semibold text-sm">
+          <button
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/MaryAnn_Omotola_Ojegbile.pdf";
+              link.download = "MaryAnn_Omotola_Ojegbile.pdf";
+              link.target = "_blank";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+            className="
+  mt-2 px-6 py-3 bg-black/50 border border-[#7B4B35]/40 rounded-xl hover:bg-[#C79A7D] hover:text-black transition font-semibold text-sm inline-block text-center cursor-pointer
+  "
+          >
+            <span className="transform hover:scale-125 transition-transform duration-300">
+              📄
+            </span>
             DOWNLOAD
           </button>
         </div>

@@ -38,7 +38,7 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-8 relative overflow-hidden">
+    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -79,14 +79,20 @@ const SplashPage: React.FC = () => {
 
         {/* Desktop */}
         <div className="hidden sm:flex w-full justify-between items-center">
-          <h1 className="text-2xl md:text-3xl text-gray-200 font-bold">Tola 🤎 &#9889;</h1>
+          <h1 className="text-2xl md:text-3xl text-gray-200 font-bold">
+            Tola 🤎 &#9889;
+          </h1>
           <div className="flex flex-col items-center justify-center bg-[#A36D5C] p-2 rounded-lg shadow-md">
             <p className="text-xs md:text-sm tracking-wide uppercase text-[#7B4B35]">
               {weekday}
             </p>
             <div className="flex items-center space-x-1 md:space-x-2">
-              <span className="text-xl text-gray-200 md:text-2xl font-bold">{day}</span>
-              <span className="text-sm text-gray-200 md:text-base">{month}</span>
+              <span className="text-xl text-gray-200 md:text-2xl font-bold">
+                {day}
+              </span>
+              <span className="text-sm text-gray-200 md:text-base">
+                {month}
+              </span>
               <span className="text-sm md:text-base text-[#7B4B35]">
                 {year}
               </span>
@@ -166,9 +172,14 @@ const SplashPage: React.FC = () => {
 
       <Link
         to="/home"
-        className={` self-end inline-flex items-center px-5 py-3 bg-gradient-to-r from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={` self-end inline-flex items-center px-5 py-3 
+    bg-gradient-to-r from-[#7B4B35] to-[#C79A7D] 
+    text-gray-200 text-sm md:text-base font-semibold 
+    rounded-full shadow-lg hover:shadow-xl 
+    transition-all duration-300 group
+    mt-4 sm:mt-0
+    ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+  `}
       >
         <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
           ⤵

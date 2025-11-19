@@ -6,18 +6,26 @@ import Contact from "../Components/Contact"
 import Footer from "../Components/Footer"
 
 function HomePage() {
-  
+  return (
+    <div className="bg-gradient-to-br from-black via-[#1a1512] to-[#3a2a22]">
+      <Intro />
+      <Profile />
 
-    return (
-      <div className="bg-gradient-to-br from-black via-[#1a1512] to-[#3a2a22] ">
-      <Intro/>
-      <Profile/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <div id="skills">
+        <Skills />
       </div>
-    )
-  }
-  
-  export default HomePage
+
+      <div id="projects">
+        <Projects />
+      </div>
+
+      <div id="contact">
+        <Contact />
+      </div>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default HomePage;
