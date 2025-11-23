@@ -36,7 +36,8 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen  font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen h-screen font-poppins flex flex-col items-center 
+  justify-center sm:justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
       {/* Glitter Animation */}
       {glitters.map((g, i) => (
         <span
