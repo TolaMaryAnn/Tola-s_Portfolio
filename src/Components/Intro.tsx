@@ -139,32 +139,34 @@ const Intro: React.FC = () => {
       </div>
 
       <div className="hidden sm:flex absolute top-6 right-6 space-x-4">
-  {[
-    { Icon: FaGithub, link: "https://github.com/TolaMaryAnn" },
-    { Icon: FaLinkedin, link: "" }, 
-    { Icon: FaTwitter, link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08" },
-  ].map(({ Icon, link }, i) => (
-    <a
-      key={i}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-14 h-14 rounded-full bg-black/50 flex items-center justify-center border border-[#7B4B35]/40 
+        {[
+          { Icon: FaGithub, link: "https://github.com/TolaMaryAnn" },
+          { Icon: FaLinkedin, link: "" },
+          {
+            Icon: FaTwitter,
+            link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
+          },
+        ].map(({ Icon, link }, i) => (
+          <a
+            key={i}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 rounded-full bg-black/50 flex items-center justify-center border border-[#7B4B35]/40 
         hover:border-[#C79A7D] transform transition duration-500 ease-out 
         hover:-translate-y-2 hover:scale-110 hover:rotate-6"
-    >
-      <Icon className="text-[#C79A7D] text-4xl" />
-    </a>
-  ))}
-</div>
-
+          >
+            <Icon className="text-[#C79A7D] text-4xl" />
+          </a>
+        ))}
+      </div>
 
       <div className="flex flex-col justify-center items-center text-center h-full px-4 md:px-20 pt-28 md:pt-32">
         <h1 className="text-4xl md:text-7xl lg:text-8xl mt-24 lg:mt-18 font-bold leading-tight text-[#C79A7D]">
           {displayText}
         </h1>
 
-        <p className="text-xl md:text-3xl mt-4 bg-gradient-to-r from-[#D9A066] via-[#C79A7D] to-[#7B4B35] bg-clip-text text-transparent">
+        <p className="text-xl md:text-3xl  mt-4 bg-gradient-to-r from-[#D9A066] via-[#C79A7D] to-[#7B4B35] bg-clip-text text-transparent">
           Frontend Engineer • Web3 Developer
         </p>
 

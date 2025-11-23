@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import profileIllustration from "../assets/1763054632167-removebg-preview.png";
@@ -33,12 +32,12 @@ const SplashPage: React.FC = () => {
       size: `${Math.random() * 3 + 1}px`,
       delay: `${Math.random() * 3}s`,
     }));
-
     setGlitters(items);
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen h-screen  font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+      {/* Glitter Animation */}
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -53,8 +52,9 @@ const SplashPage: React.FC = () => {
         ></span>
       ))}
 
+      {/* Top Section */}
       <div
-        className={`w-full mb-8 transition-all duration-1000 ease-out transform ${
+        className={`w-full mb-3 sm:mb-8 transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
         }`}
       >
@@ -73,24 +73,24 @@ const SplashPage: React.FC = () => {
           </div>
 
           <h1 className="text-2xl text-white mt-4 font-bold text-center">
-            Tola 🤎 &#9889;
+            Tola 🤎 ⚡
           </h1>
         </div>
 
         {/* Desktop */}
         <div className="hidden sm:flex w-full justify-between items-center">
           <h1 className="text-2xl md:text-3xl text-gray-200 font-bold">
-            Tola 🤎 &#9889;
+            Tola 🤎 ⚡
           </h1>
           <div className="flex flex-col items-center justify-center bg-[#A36D5C] p-2 rounded-lg shadow-md">
             <p className="text-xs md:text-sm tracking-wide uppercase text-[#7B4B35]">
               {weekday}
             </p>
             <div className="flex items-center space-x-1 md:space-x-2">
-              <span className="text-xl text-gray-200 md:text-2xl font-bold">
+              <span className="text-xl md:text-2xl text-gray-200 font-bold">
                 {day}
               </span>
-              <span className="text-sm text-gray-200 md:text-base">
+              <span className="text-sm md:text-base text-gray-200">
                 {month}
               </span>
               <span className="text-sm md:text-base text-[#7B4B35]">
@@ -103,12 +103,17 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`relative flex justify-center items-center mt-6 sm:mt-12 w-full transition-all duration-1000 ease-out transform ${
+        className={`relative flex justify-center items-center mt-2 sm:mt-6 w-full transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h2 className="text-4xl text-gray-200 xs:text-5xl sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative z-10 leading-none">
-          PORTFOLIO
+        <h2 className="text-4xl xs:text-5xl font-montserrat sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative text-gray-200 leading-none">
+          <span className="relative inline-block">
+            PORTFOLIO
+            <span className="absolute right-0 top-full text-sm xs:text-sm text-[#D9A066] sm:text-3xl md:text-2xl font-semibold">
+              Frontend Developer
+            </span>
+          </span>
         </h2>
 
         <img
@@ -151,41 +156,45 @@ const SplashPage: React.FC = () => {
         </style>
       </div>
 
-      {/* Social icons */}
-<div
-  className={`flex flex-wrap justify-center gap-4 sm:gap-10 lg:mt-18 mt-8 transition-all duration-1000 ease-out transform ${
-    show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-  }`}
->
-  {[
-    { Icon: FaInstagram, link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==" },
-    { Icon: FaLinkedin, link: "" }, // replace with your LinkedIn
-    { Icon: FaTwitter, link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08" },
-    { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
-  ].map(({ Icon, link }, i) => (
-    <a
-      key={i}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
-    >
-      <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
-    </a>
-  ))}
-</div>
+      {/* Social Icons */}
+      <div
+        className={`flex flex-wrap justify-center gap-4 sm:gap-10 mt-3 sm:mt-8 transition-all duration-1000 ease-out transform ${
+          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        {[
+          {
+            Icon: FaInstagram,
+            link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==",
+          },
+          { Icon: FaLinkedin, link: "" },
+          {
+            Icon: FaTwitter,
+            link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
+          },
+          { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
+        ].map(({ Icon, link }, i) => (
+          <a
+            key={i}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
+          >
+            <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
+        ))}
+      </div>
 
-
+      {/* Enter Button */}
       <Link
         to="/home"
-        className={` self-end inline-flex items-center px-5 py-3 
-    bg-gradient-to-r from-[#7B4B35] to-[#C79A7D] 
-    text-gray-200 text-sm md:text-base font-semibold 
-    rounded-full shadow-lg hover:shadow-xl 
-    transition-all duration-300 group
-    mt-4 sm:mt-0
-    ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-  `}
+        className={`self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
+        from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
+        font-semibold rounded-full shadow-lg hover:shadow-xl 
+        transition-all duration-300 group mt-2 sm:mt-0 ${
+          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
       >
         <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
           ⤵

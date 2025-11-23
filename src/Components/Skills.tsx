@@ -11,7 +11,7 @@ import {
   SiNextdotjs,
   SiCplusplus,
   SiSolidity,
-  SiMysql,
+  SiTypescript,
 } from "react-icons/si";
 
 const skills = [
@@ -20,12 +20,12 @@ const skills = [
   { name: "CSS", icon: <FaCss3Alt /> },
   { name: "TailwindCSS", icon: <SiTailwindcss /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
-  { name: "TypeScript", icon: <FaReact /> },
+  { name: "React.js", icon: <FaReact /> }, // Added React.js
+  { name: "TypeScript", icon: <SiTypescript /> }, // Correct TypeScript icon
   { name: "C++", icon: <SiCplusplus /> },
   { name: "Python", icon: <FaPython /> },
   { name: "Solidity", icon: <SiSolidity /> },
   { name: "Git", icon: <FaGit /> },
-  { name: "MySQL", icon: <SiMysql /> },
 ];
 
 const colors = [

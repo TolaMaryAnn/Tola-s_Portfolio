@@ -1,3 +1,5 @@
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./index.html",
@@ -12,6 +14,10 @@ module.exports = {
         deepMocha: '#4E3629',
         goldenBrown: '#D9A066',
         earthyTan: '#BFA18F',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       keyframes: {
         shakeFancy: {

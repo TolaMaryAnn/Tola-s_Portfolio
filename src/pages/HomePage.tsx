@@ -9,7 +9,7 @@ import CursorDot from "../Components/CursorDot";
 
 function HomePage() {
   return (
-    <div className="bg-gradient-to-br from-black via-[#1a1512] to-[#3a2a22] relative h-screen overflow-hidden">
+    <div className="bg-gradient-to-br from-black via-[#1a1512] to-[#3a2a22] relative h-screen overflow-hidden font-poppins">
       <div className="h-full overflow-y-scroll scrollbar-none">
         <CursorDot />
         <Intro />
