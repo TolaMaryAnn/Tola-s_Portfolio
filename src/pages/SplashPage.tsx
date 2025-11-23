@@ -36,8 +36,7 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen font-poppins flex flex-col items-center 
-  justify-center sm:justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen h-screen  font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
       {/* Glitter Animation */}
       {glitters.map((g, i) => (
         <span
@@ -189,19 +188,20 @@ const SplashPage: React.FC = () => {
 
       {/* Enter Button */}
       <Link
-        to="/home"
-        className={`self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
-        from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
-        font-semibold rounded-full shadow-lg hover:shadow-xl 
-        transition-all duration-300 group mt-2 sm:mt-0 ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
-          ⤵
-        </span>
-        Enter Portfolio
-      </Link>
+  to="/home"
+  className={`self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
+  from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
+  font-semibold rounded-full shadow-lg hover:shadow-xl 
+  transition-all duration-300 group mt-4 sm:mt-0 ${
+    show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+  }`}
+>
+  <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
+    ⤵
+  </span>
+  Enter Portfolio
+</Link>
+
     </div>
   );
 };
