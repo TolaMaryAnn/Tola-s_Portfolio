@@ -37,7 +37,6 @@ const SplashPage: React.FC = () => {
 
   return (
     <div className="w-screen min-h-[100dvh] lg:h-screen   font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
-    
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -53,7 +52,7 @@ const SplashPage: React.FC = () => {
       ))}
 
       <div
-       className={`flex flex-col items-center gap-3 sm:gap-6 mt-0 sm:mt-4
+        className={`flex flex-col items-center gap-3 sm:gap-6 mt-0 sm:mt-4
         transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
@@ -157,43 +156,45 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`flex flex-col items-center gap-4 sm:gap-6 mt-3 sm:mt-4 transition-all duration-1000 ease-out transform ${
+        className={`flex flex-wrap justify-center gap-4 sm:gap-10 mt-3 sm:mt-4 transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        {/* Social Icons Row */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-10">
-          {[
-            {
-              Icon: FaInstagram,
-              link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==",
-            },
-            { Icon: FaLinkedin, link: "" },
-            {
-              Icon: FaTwitter,
-              link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
-            },
-            { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
-          ].map(({ Icon, link }, i) => (
-            <a
-              key={i}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
-            >
-              <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
-            </a>
-          ))}
-        </div>
+        {[
+          {
+            Icon: FaInstagram,
+            link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==",
+          },
+          { Icon: FaLinkedin, link: "" },
+          {
+            Icon: FaTwitter,
+            link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
+          },
+          { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
+        ].map(({ Icon, link }, i) => (
+          <a
+            key={i}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
+          >
+            <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
+        ))}
+      </div>
 
-        {/* Button under icons */}
+      <div
+        className={`w-full flex justify-end mt-2 sm:mt-3 transition-all duration-1000 ease-out transform ${
+          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <Link
           to="/home"
-          className="self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
-  from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
-  font-semibold rounded-full shadow-lg hover:shadow-xl 
-  transition-all duration-300"
+          className="inline-flex items-center px-5 py-3 bg-gradient-to-r 
+      from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
+      font-semibold rounded-full shadow-lg hover:shadow-xl 
+      transition-all duration-300"
         >
           <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
             ⤵
