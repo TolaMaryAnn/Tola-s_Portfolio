@@ -52,7 +52,6 @@ const SplashPage: React.FC = () => {
         ></span>
       ))}
 
-   
       <div
         className={`w-full  transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
@@ -157,49 +156,50 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`flex flex-wrap justify-center gap-4 sm:gap-10 mt-3 sm:mt-8 transition-all duration-1000 ease-out transform ${
+        className={`flex flex-col items-center gap-4 sm:gap-6 mt-3 sm:mt-4 transition-all duration-1000 ease-out transform ${
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        {[
-          {
-            Icon: FaInstagram,
-            link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==",
-          },
-          { Icon: FaLinkedin, link: "" },
-          {
-            Icon: FaTwitter,
-            link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
-          },
-          { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
-        ].map(({ Icon, link }, i) => (
-          <a
-            key={i}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
-          >
-            <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
-          </a>
-        ))}
-      </div>
+        {/* Social Icons Row */}
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-10">
+          {[
+            {
+              Icon: FaInstagram,
+              link: "https://www.instagram.com/tee_ola7?utm_source=qr&igsh=MW8wNGdnYnRkNWtkbA==",
+            },
+            { Icon: FaLinkedin, link: "" },
+            {
+              Icon: FaTwitter,
+              link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
+            },
+            { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
+          ].map(({ Icon, link }, i) => (
+            <a
+              key={i}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-[#C79A7D] text-gray-200 rounded-full p-2 sm:p-3 hover:text-[#7B4B35] transition-all duration-300"
+            >
+              <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
+            </a>
+          ))}
+        </div>
 
-      {/* Enter Button */}
-      <Link
-        to="/home"
-        className={`self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
+        {/* Button under icons */}
+        <Link
+          to="/home"
+          className="self-end inline-flex items-center px-5 py-3 bg-gradient-to-r 
   from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
   font-semibold rounded-full shadow-lg hover:shadow-xl 
-  transition-all duration-300  ${
-    show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-  }`}
-      >
-        <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
-          ⤵
-        </span>
-        Enter Portfolio
-      </Link>
+  transition-all duration-300"
+        >
+          <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
+            ⤵
+          </span>
+          Enter Portfolio
+        </Link>
+      </div>
     </div>
   );
 };
