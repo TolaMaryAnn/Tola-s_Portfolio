@@ -36,8 +36,8 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen  font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
-      {/* Glitter Animation */}
+    <div className="w-screen min-h-[100dvh] lg:h-screen   font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    
       {glitters.map((g, i) => (
         <span
           key={i}
@@ -53,8 +53,9 @@ const SplashPage: React.FC = () => {
       ))}
 
       <div
-        className={`w-full  transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+       className={`flex flex-col items-center gap-3 sm:gap-6 mt-0 sm:mt-4
+        transition-all duration-1000 ease-out transform ${
+          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         {/* Mobile */}
