@@ -106,7 +106,7 @@ const SplashPage: React.FC = () => {
           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <h2 className="text-4xl xs:text-5xl font-montserrat sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative text-gray-200 leading-none">
+        <h2 className="text-[2.75rem] xs:text-5xl font-montserrat sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative text-gray-200 leading-none">
           <span className="relative inline-block">
             PORTFOLIO
             <span className="absolute right-0 top-full text-sm xs:text-sm text-[#D9A066] sm:text-3xl md:text-2xl font-semibold">
