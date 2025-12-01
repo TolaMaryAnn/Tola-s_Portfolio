@@ -166,12 +166,12 @@ const Intro: React.FC = () => {
           {displayText}
         </h1>
 
-        <p className="text-xl md:text-3xl  mt-4 bg-gradient-to-r from-[#D9A066] via-[#C79A7D] to-[#7B4B35] bg-clip-text text-transparent">
-          Frontend Engineer • Web3 Developer
+        <p className="text-[1.2rem] md:text-3xl  mt-4 bg-gradient-to-r from-[#D9A066] via-[#C79A7D] to-[#7B4B35] bg-clip-text text-transparent">
+          Frontend Developer • Web3 Developer
         </p>
 
         <div className="lg:mt-20 mt-20">
-          <p className="text-xs tracking-widest text-[#C79A7D] mb-3">
+          <p className="text-xs font-extrabold tracking-widest text-[#C79A7D] mb-3">
             MY RESUME
           </p>
           <a
@@ -181,7 +181,7 @@ const Intro: React.FC = () => {
             rel="noopener noreferrer"
             className="
     relative z-50 pointer-events-auto
-    mt-6 px-8 py-3 bg-black/70 border border-[#7B4B35]/60 rounded-xl
+    mt-2 px-8 py-3 bg-black/70 border border-[#7B4B35]/60 rounded-xl
     text-white font-semibold text-sm
     inline-flex items-center gap-2 justify-center
     

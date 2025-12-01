@@ -193,13 +193,13 @@ const SplashPage: React.FC = () => {
           to="/home"
           className="inline-flex items-center px-5 py-3 bg-gradient-to-r 
       from-[#7B4B35] to-[#C79A7D] text-gray-200 text-sm md:text-base 
-      font-semibold rounded-full shadow-lg hover:shadow-xl 
+      font-semibold rounded-full shadow-lg hover:shadow-xl uppercase
       transition-all duration-300"
         >
           <span className="mr-2 inline-block animate-bounce text-[#D9A066]">
             ⤵
           </span>
-          Enter Portfolio
+          Check it out
         </Link>
       </div>
     </div>
