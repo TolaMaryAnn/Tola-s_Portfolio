@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Intro: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -29,21 +30,21 @@ const Intro: React.FC = () => {
         top: "-32px",
         left: "-80px",
         size: "w-72 h-72",
-        color: "#7B4B35",
+        color: "#4E3629",
         anim: "animate-float-slow",
       },
       {
         top: "160px",
         right: "-80px",
         size: "w-80 h-80",
-        color: "#C79A7D",
+        color: "#2C1B12",
         anim: "animate-float-slower",
       },
       {
         bottom: "80px",
         left: "50%",
         size: "w-96 h-96",
-        color: "#D9A066",
+        color: "#1A0F0A",
         anim: "animate-float-slowest",
         translate: "-translate-x-1/2",
       },
@@ -90,9 +91,8 @@ const Intro: React.FC = () => {
       {blobs.map((b, i) => (
         <div
           key={i}
-          className={`absolute ${b.size} rounded-full opacity-20 blur-3xl ${
-            b.anim
-          } animate-twinkle ${b.translate || ""}`}
+          className={`absolute ${b.size} rounded-full opacity-20 blur-3xl ${b.anim
+            } animate-twinkle ${b.translate || ""}`}
           style={{
             top: b.top,
             bottom: b.bottom,
@@ -103,39 +103,10 @@ const Intro: React.FC = () => {
         />
       ))}
 
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 flex items-center space-x-4 bg-black/30 px-10 py-4 rounded-full backdrop-blur-md border border-[#7B4B35]/40 whitespace-nowrap">
-        <button
-          onClick={() => {
-            document.getElementById("skills")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
-        >
-          Skills
-        </button>
-
-        <button
-          onClick={() => {
-            document.getElementById("projects")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
-        >
-          Projects
-        </button>
-
-        <button
-          onClick={() => {
-            document.getElementById("contact")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="text-sm font-medium hover:text-[#C79A7D] hover:text-base transition-all duration-300"
-        >
-          Contact Me
-        </button>
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 flex items-center space-x-6 bg-black/40 px-10 py-4 rounded-full backdrop-blur-xl border border-[#7B4B35]/30 whitespace-nowrap z-40 shadow-lg">
+        <button onClick={() => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })} className="text-sm font-medium tracking-wide text-gray-200 hover:text-[#D9A066] hover:scale-105 transition-all duration-300">Skills</button>
+        <button onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })} className="text-sm font-medium tracking-wide text-gray-200 hover:text-[#D9A066] hover:scale-105 transition-all duration-300">Projects</button>
+        <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} className="text-sm font-medium tracking-wide text-gray-200 hover:text-[#D9A066] hover:scale-105 transition-all duration-300">Contact</button>
       </div>
 
       <div className="hidden sm:flex absolute top-6 right-6 space-x-4">
@@ -143,9 +114,10 @@ const Intro: React.FC = () => {
           { Icon: FaGithub, link: "https://github.com/TolaMaryAnn" },
           { Icon: FaLinkedin, link: "" },
           {
-            Icon: FaTwitter,
+            Icon: FaXTwitter,
             link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
           },
+          { Icon: FaYoutube, link: "https://youtube.com/@debugged.life.of_tee?si=45HkcmSMMrolIlPM" },
         ].map(({ Icon, link }, i) => (
           <a
             key={i}

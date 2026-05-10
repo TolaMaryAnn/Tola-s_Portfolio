@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { supabase } from "../lib/supabaseClient";
 
 import TeeLandImg from "../assets/Screenshot from 2025-11-15 19-24-38.png";
 import ESCImg from "../assets/Screenshot from 2025-11-15 19-35-06.png";
@@ -8,7 +9,7 @@ import SBPImg from "../assets/Screenshot from 2025-11-15 19-47-00.png";
 import MiniMeImg from "../assets/Screenshot from 2025-11-15 19-57-12.png";
 import ShopVamsImg from "../assets/Screenshot from 2025-11-15 19-59-04.png";
 
-const projects = [
+const initialProjects = [
   {
     name: "TeeLand",
     image: TeeLandImg,
@@ -55,6 +56,18 @@ const projects = [
 
 export default function Projects() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [projectsList, setProjectsList] = useState<Array<{ name: string, image: string, description: string, link: string }>>(initialProjects);
+
+  useEffect(() => {
+    async function fetchProjects() {
+      if (!supabase) return;
+      const { data, error } = await supabase.from("projects").select("*");
+      if (!error && data && data.length > 0) {
+        setProjectsList([...(data as any), ...initialProjects]);
+      }
+    }
+    fetchProjects();
+  }, []);
 
   return (
     <section className="relative py-16 text-white overflow-hidden">
@@ -63,7 +76,7 @@ export default function Projects() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px)",
+              "linear-gradient(rgba(123, 75, 53, 0.1) 1px, transparent 1px)",
             backgroundSize: "100% 120px",
             animation: "moveDown 12s linear infinite",
           }}
@@ -73,7 +86,7 @@ export default function Projects() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
+              "linear-gradient(90deg, rgba(123, 75, 53, 0.1) 1px, transparent 1px)",
             backgroundSize: "120px 100%",
             animation: "moveRight 12s linear infinite",
           }}
@@ -109,7 +122,7 @@ export default function Projects() {
   "
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {projects.map((project, index) => {
+          {projectsList.map((project, index) => {
             const isExpanded = expandedIndex === index;
             const shortText = project.description.slice(0, 80) + "...";
 
@@ -122,7 +135,7 @@ export default function Projects() {
     hover:scale-105 hover:shadow-2xl relative backdrop-blur-sm
   "
                 style={{
-                  backgroundColor: "rgba(78, 54, 41, 0.35)",
+                  backgroundColor: "rgba(20, 15, 10, 0.8)",
                   scrollSnapAlign: "center",
                 }}
               >

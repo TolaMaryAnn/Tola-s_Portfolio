@@ -5,6 +5,7 @@ import {
   FaReact,
   FaGit,
   FaPython,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -24,14 +25,15 @@ const skills = [
   { name: "TypeScript", icon: <SiTypescript /> }, // Correct TypeScript icon
   { name: "C++", icon: <SiCplusplus /> },
   { name: "Python", icon: <FaPython /> },
+  { name: "Java", icon: <FaJava /> },
   { name: "Solidity", icon: <SiSolidity /> },
   { name: "Git", icon: <FaGit /> },
 ];
 
 const colors = [
-  "bg-gradient-to-br from-[#7B4B35] to-[#A36D5C]",
-  "bg-gradient-to-br from-[#C79A7D] to-[#BFA18F]",
-  "bg-gradient-to-br from-[#4E3629] to-[#D9A066]",
+  "bg-gradient-to-br from-[#1A0F0A] to-[#2C1B12] border border-[#7B4B35]/30",
+  "bg-gradient-to-br from-[#20140D] to-[#382216] border border-[#8C5A42]/30",
+  "bg-gradient-to-br from-[#140C08] to-[#25150E] border border-[#5A3828]/30",
 ];
 
 export default function Skills() {
@@ -40,16 +42,14 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-xl tracking-widest mb-6">SKILLS</h2>
 
-        <div className="flex gap-4 overflow-x-auto lg:grid lg:grid-cols-11 lg:gap-4 lg:justify-center py-2">
+        <div className="flex flex-wrap gap-4 justify-center py-6 max-w-5xl mx-auto">
           {skills.map((skill, i) => (
             <div
               key={i}
-              className={`flex flex-col items-center justify-center min-w-[6rem] w-24 h-24 rounded-xl shadow-lg cursor-pointer transition-transform duration-300 transform hover:scale-105 ${
-                colors[i % colors.length]
-              } text-black`}
+              className={`flex flex-col items-center justify-center min-w-[6rem] w-24 h-24 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] cursor-pointer transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_20px_rgba(217,160,102,0.2)] hover:-translate-y-2 ${colors[i % colors.length]} text-[#D9A066]`}
             >
-              <div className="text-4xl">{skill.icon}</div>
-              <span className="text-xs mt-2 text-center font-semibold">
+              <div className="text-4xl text-gray-200 hover:text-[#D9A066] transition-colors">{skill.icon}</div>
+              <span className="text-xs mt-2 text-center font-medium tracking-wide">
                 {skill.name}
               </span>
             </div>

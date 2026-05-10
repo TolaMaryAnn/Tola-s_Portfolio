@@ -1,4 +1,5 @@
-import { FaEnvelope, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import ContactIllustration from "../assets/1763054783764-removebg-preview.png";
 
 function Contact() {
@@ -16,8 +17,8 @@ function Contact() {
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-12">
             <a
               href="mailto:maryannomotola393@gmail.com"
-              className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: "#4E3629" }}
+              className="group p-6 sm:p-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(217,160,102,0.3)]"
+              style={{ backgroundColor: "#1A0F0A", border: "1px solid rgba(123,75,53,0.3)" }}
             >
               <FaEnvelope
                 className="text-goldenBrown text-4xl sm:text-7xl"
@@ -27,21 +28,23 @@ function Contact() {
 
             <a
               href="https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08"
-              className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: "#4E3629" }}
+              className="group p-6 sm:p-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(217,160,102,0.3)]"
+              style={{ backgroundColor: "#1A0F0A", border: "1px solid rgba(123,75,53,0.3)" }}
             >
-              <FaTwitter
+              <FaXTwitter
                 className="text-goldenBrown text-4xl sm:text-7xl"
                 style={{ color: "#D9A066" }}
               />
             </a>
 
             <a
-              href="#"
-              className="bg-deepMocha hover:bg-primaryBrown p-6 sm:p-10 rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              style={{ backgroundColor: "#4E3629" }}
+              href="https://wa.me/qr/YPSBJD47QEJZP1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 sm:p-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(217,160,102,0.3)]"
+              style={{ backgroundColor: "#1A0F0A", border: "1px solid rgba(123,75,53,0.3)" }}
             >
-              <FaLinkedinIn
+              <FaWhatsapp
                 className="text-goldenBrown text-4xl sm:text-7xl"
                 style={{ color: "#D9A066" }}
               />

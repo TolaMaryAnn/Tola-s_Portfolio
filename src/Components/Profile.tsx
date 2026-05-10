@@ -46,14 +46,14 @@ function Profile() {
       />
 
       <div
-        className="relative w-full max-w-4xl rounded-3xl border shadow-xl py-24 px-6 sm:px-10 text-center mt-28 sm:mt-32 backdrop-blur-xl"
-        style={{ borderColor: "#7B4B35", backgroundColor: "rgba(0,0,0,0.25)" }}
+        className="relative w-full max-w-4xl rounded-3xl border shadow-2xl py-24 px-6 sm:px-10 text-center mt-28 sm:mt-32 backdrop-blur-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(217,160,102,0.1)]"
+        style={{ borderColor: "rgba(123, 75, 53, 0.4)", backgroundColor: "rgba(15, 10, 8, 0.6)" }}
       >
         <div
-          className="absolute left-1/2 -top-16 sm:-top-20 -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden shadow-2xl animate-shake"
+          className="absolute left-1/2 -top-16 sm:-top-20 -translate-x-1/2 w-40 h-40 rounded-full overflow-hidden shadow-2xl animate-shake hover:scale-105 transition-transform duration-300"
           style={{
-            border: "6px solid #C79A7D",
-            boxShadow: "0 0 35px rgba(199,154,125,0.35)",
+            border: "4px solid #D9A066",
+            boxShadow: "0 0 40px rgba(217,160,102,0.4)",
           }}
         >
           <img

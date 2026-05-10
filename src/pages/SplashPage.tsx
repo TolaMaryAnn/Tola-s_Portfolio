@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import profileIllustration from "../assets/1763054632167-removebg-preview.png";
 
 const SplashPage: React.FC = () => {
@@ -36,11 +37,11 @@ const SplashPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-[100dvh] lg:h-screen   font-poppins flex flex-col items-center justify-between bg-[#4E3629] text-black p-2 relative overflow-hidden">
+    <div className="w-screen min-h-[100dvh] lg:h-screen font-poppins flex flex-col items-center justify-between bg-gradient-to-br from-[#0a0705] via-[#1a120e] to-[#261811] text-gray-200 p-2 relative overflow-hidden">
       {glitters.map((g, i) => (
         <span
           key={i}
-          className="absolute bg-yellow-200 rounded-full animate-glitter"
+          className="absolute bg-[#D9A066] shadow-[0_0_8px_#D9A066] rounded-full animate-glitter"
           style={{
             left: g.left,
             top: g.top,
@@ -53,9 +54,8 @@ const SplashPage: React.FC = () => {
 
       <div
         className={`flex flex-col items-center gap-3 sm:gap-6 mt-0 sm:mt-4
-        transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        transition-all duration-1000 ease-out transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         {/* Mobile */}
         <div className="flex flex-col items-center sm:hidden space-y-2">
@@ -102,9 +102,8 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`relative flex justify-center items-center  w-full transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative flex justify-center items-center  w-full transition-all duration-1000 ease-out transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <h2 className="text-[2.75rem] xs:text-5xl font-montserrat sm:text-6xl md:text-7xl lg:text-[12rem] font-extrabold text-center relative text-gray-200 leading-none">
           <span className="relative inline-block">
@@ -156,9 +155,8 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`flex flex-wrap justify-center gap-4 sm:gap-10 mt-3 sm:mt-4 transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`flex flex-wrap justify-center gap-4 sm:gap-10 mt-3 sm:mt-4 transition-all duration-1000 ease-out transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         {[
           {
@@ -167,10 +165,11 @@ const SplashPage: React.FC = () => {
           },
           { Icon: FaLinkedin, link: "" },
           {
-            Icon: FaTwitter,
+            Icon: FaXTwitter,
             link: "https://x.com/daniee_tola?t=6mWeyoZIjuPJFTVkj9euqQ&s=08",
           },
           { Icon: FaWhatsapp, link: "https://wa.me/qr/YPSBJD47QEJZP1" },
+          { Icon: FaYoutube, link: "https://youtube.com/@debugged.life.of_tee?si=45HkcmSMMrolIlPM" },
         ].map(({ Icon, link }, i) => (
           <a
             key={i}
@@ -185,9 +184,8 @@ const SplashPage: React.FC = () => {
       </div>
 
       <div
-        className={`w-full flex justify-end mt-2 sm:mt-3 transition-all duration-1000 ease-out transform ${
-          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`w-full flex justify-end mt-2 sm:mt-3 transition-all duration-1000 ease-out transform ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Link
           to="/home"

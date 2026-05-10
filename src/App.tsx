@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage";
 import HomePage from "./pages/HomePage";
-
+import AdminPage from "./pages/AdminPage";
 
 
 const App: React.FC = () => {
@@ -13,6 +13,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<SplashPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </Router>
   );
