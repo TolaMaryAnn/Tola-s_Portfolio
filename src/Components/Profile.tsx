@@ -76,7 +76,7 @@ function Profile() {
         </p>
 
         <p className="text-base sm:text-xl text-white leading-relaxed max-w-3xl mx-auto">
-          "I love taking ideas apart and rebuilding them into something cleaner, smarter, and more thoughtful.
+          
 
           Through personal projects and freelance gigs 🙂, I’ve explored different creative and technical challenges, learning how to build experiences that feel intuitive, meaningful, and genuinely user-focused."
         </p>
